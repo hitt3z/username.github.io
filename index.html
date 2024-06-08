@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 2em;
+        }
+        .home, .about, .portfolio, .blog, .resume, .contact {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .colorful-background {
+            background-color: #f0f8ff;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Webpage</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+        <a href="#" onclick="showSection('blog')">Blog</a>
+        <a href="#" onclick="showSection('resume')">Resume</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <section id="home" class="home colorful-background active">
+        <h2>Welcome to My Website</h2>
+        <p>Feel free to explore my webpage and learn more about me.</p>
+    </section>
+    <section id="about" class="about colorful-background">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Introduce yourself here. Write about your background, interests, and what you do.</p>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio colorful-background">
+        <h2>Portfolio</h2>
+        <div class="card">
+            <p>Showcase your work here. Include projects, artworks, or anything that represents your professional accomplishments.</p>
+        </div>
+    </section>
+    <section id="blog" class="blog colorful-background">
+        <h2>Blog</h2>
+        <div class="card">
+            <p>Share your thoughts and experiences here. Write blog posts about topics you are passionate about.</p>
+        </div>
+    </section>
+    <section id="resume" class="resume colorful-background">
+        <h2>Resume</h2>
+        <div class="card">
+            <p>Detail your professional experience, education, and skills here. You can include a downloadable resume link as well.</p>
+        </div>
+    </section>
+    <section id="contact" class="contact colorful-background">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Provide your contact information here. Include your email, phone number, and links to your social media profiles.</p>
+        </div>
+    </section>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
